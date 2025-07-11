@@ -4,8 +4,8 @@ export const test = mysqlTable("test", {
   id: bigint("id", { mode: "number", unsigned: true })
     .autoincrement()
     .primaryKey(),
-  name: varchar("name", { length: 256 }).notNull(),
-  email: varchar("email", { length: 256 }).notNull().unique(),
+  name: varchar("name", { length: 100 }).notNull(),
+  email: varchar("email", { length: 100 }).notNull().unique(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().onUpdateNow().notNull(),
 });
